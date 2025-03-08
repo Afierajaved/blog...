@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sukaina College of Nursing</title>
+  <style>
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+}
+.sticky-header {
+   position: sticky;
+   top: 0;
+   background-color: #d5e1de;
+   z-index: 1000;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.login-btn {
+    width: 70px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #30866f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .login-btn:hover {
+    background-color: #399e6d;
+  }
+.logo {
+  padding: 10px 20px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  position: relative; 
+  z-index: 1000;
+}
+
+.logo img {
+  height: 100px;
+  margin-right: 20px;
+}
+
+.logo h1{
+  font-size: 30PX;
+  color: #034d3f;
+  margin-bottom: 0%;
+}
+.logo p {
+  margin-top: 0%;
+  color: #034d3f;
+  font-size: 18.5px;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #034d3f;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  width: 97.5%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #30866f;
+  padding: 2px 20px;
+  z-index: 1000;
+  }
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+.dropdown-menu {
+ display: none;
+ position: absolute;
+ background-color: #444;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ top: 100%;
+ left: 0;
+ min-width: 150px;
+}
+.dropdown-menu li a {
+   padding: 10px;
+   display: block;
+}
+.dropdown:hover .dropdown-menu {
+   display: block;
+}
+.language-select {
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 35px;
+} 
+.form-container {
+margin-top: 300px;
+max-width: 600px;
+margin: 50px auto;
+padding: 20px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-logo{
+  margin-left: 40%;
+}
+h1,h2,h3,h4 {
+  text-align: center;
+  color: #034d3f;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #72b3b4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #399e6d;
+} 
+
+    footer {
+      background: linear-gradient( #72b3b4, #399e6d);
+      color: white;
+      text-align: center;
+      padding: 0px 10px;
+    }
+    .map-container iframe {
+      width: 50%;
+      height: 200px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+.footer-container {
+
+    max-width: 800px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.footer-container a {
+    color: #cce7e2;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-size: 28px;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+    .footer-links {
+      margin-top: 20px;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+    footer h2 {
+      font-size: 20px;
+    }
+    .social-icons a {
+      font-size: 24px;
+    }
+    .footer-links a {
+      font-size: 12px;
+    }
+    }
+    .footer-bottom {
+    background-color: #285e57;
+    padding: 10px 0;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #cce7e2;
+}
+    </style>
+  <script>
+     function clearSearch() {
+            document.getElementById("search-input").value = "";
+        }
+  </script>
+</head>
+<body>
+  <div class="sticky-header">
+    <div class="logo">
+      <img src="pic/SCN logo.png" alt="College Logo">
+      <div>
+        <h1>SUKAINA COLLEGE OF NURSING</h1>
+        <p>MIDWIFERY AND ALLIED HEALTH SCIENCES KHANPUR</p>
+      </div>
+      <button class="login-btn">Login</button>
+      <a href="c:\Users\User\Desktop\SCN\login.html" class="login-btn">Login</a>
+    </div>
+      <div class="line">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="c:\Users\User\Desktop\SCN\SCN.html">Home</a></li>
+          <li class="dropdown">
+              <a href="c:\Users\User\Desktop\SCN\Ab.Us.html">About Us</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">Mission</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Leadership</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="c:\Users\User\Desktop\SCN\program.html">Programs</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">BSN</a></li>
+                  <li><a href="#">BSM</a></li>
+                  <li><a href="#">LHV</a></li>
+                  <li><a href="#">CNA</a></li>
+                  <li><a href="#">Community midwifes</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#">Academics</a>
+              <ul class="dropdown-menu">
+                  <li><a href="c:\Users\User\Desktop\SCN\program.html">Programs</a></li>
+                  <li><a href="c:\Users\User\Desktop\SCN\faculties.html">Faculties</a></li>
+                  <li><a href="c:\Users\User\Desktop\SCN\Departments.html">Departments</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Students</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\Gallary.html">Gallary</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\News.html">News</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\contsct us.html">Contact Us</a></li>
+      </ul>
+      <div class="language-select">
+        <select>
+            <option value="en">English</option>
+            <option value="ur">Urdu</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
+    </div>
+  </nav>
+  </div>
+  </div>
+  <section>
+    <div class="form-container">
+      <div class="form-logo">
+        <img src="pic/SCN logo.png" width="100" height="100">
+      </div>
+     <h1>SUKAINA COLLEGE OF NURSING</h1>
+     <h2>MIDWIFERY & ALLIED HEALTH SCIENCES KHANPUR</h2>
+     <h3>ADMISSION FORM</h3>
+
+     <form action="/submit-form" method="POST">
+         <h4>1. PERSONAL INFORMATION:</h4>
+         <label for="studentName">Name of the Student:</label>
+         <input type="text" id="studentName" name="studentName" required>
+
+         <label for="fatherName">Father's/Guardian Name:</label>
+         <input type="text" id="fatherName" name="fatherName" required>
+
+         <label for="fatherEducation">Father's Education & Occupation:</label>
+         <input type="text" id="fatherEducation" name="fatherEducation" required>
+
+         <label for="annualIncome">Annual Income of Parents:</label>
+         <input type="text" id="annualIncome" name="annualIncome" required>
+
+         <label for="fatherContact">Father's/Guardian Contact No:</label>
+         <input type="text" id="fatherContact" name="fatherContact" required>
+
+         <label for="dob">Date of Birth:</label>
+         <input type="date" id="dob" name="dob" required>
+
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email" required>
+
+         <label for="phone">Phone No:</label>
+         <input type="text" id="phone" name="phone" required>
+
+         <label for="religion">Religion:</label>
+         <select id="religion" name="religion" required>
+             <option value="">Select Religion</option>
+             <option value="Christianity">Christianity</option>
+             <option value="Islam">Islam</option>
+             <option value="Hinduism">Hinduism</option>
+             <option value="Other">Other</option>
+         </select>
+
+         <label for="maritalStatus">Marital Status:</label>
+         <select id="maritalStatus" name="maritalStatus" required>
+             <option value="">Select Marital Status</option>
+             <option value="Single">Single</option>
+             <option value="Married">Married</option>
+             <option value="Divorced">Divorced</option>
+             <option value="Widowed">Widowed</option>
+         </select>
+
+         <label for="permanentAddress">Permanent Address:</label>
+         <textarea id="permanentAddress" name="permanentAddress" required></textarea>
+
+         <label for="correspondenceAddress">Address for Correspondence:</label>
+         <textarea id="correspondenceAddress" name="correspondenceAddress" required></textarea>
+
+         <h4>2. EDUCATION INFORMATION:</h4>
+         <label for="qualifications">Academic & Professional Qualifications:</label>
+         <textarea id="qualifications" name="qualifications" required></textarea>
+
+         <label for="submissionDate">Date of Submission:</label>
+         <input type="date" id="submissionDate" name="submissionDate" required>
+
+         <label for="domicile">Upload Domicile Copy:</label>
+         <input type="file" id="domicile" name="domicile" required>
+         
+         <label for="cnic_copy">Upload CNIC Copy:</label>
+         <input type="file" id="cnic_copy" name="cnic_copy" required>
+         
+         <label for="matric_certificate">Upload Matriculation Certificate:</label>
+         <input type="file" id="matric_certificate" name="matric_certificate" required>
+         
+         <label for="picture">Upload Passport Size Picture:</label>
+         <input type="file" id="picture" name="picture" required>
+         <button type="submit">Submit</button>
+     </form>
+ </div>    
+
+  </section>
+  <footer>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.0279731773345!2d70.65231621510945!3d28.6467914824124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3938c583b7b9e84f%3A0x3ab7b184432c64c9!2sKhanpur%20College%20Of%20Nursing%20Allied%20Health%20Sciences!5e0!3m2!1sen!2s!4v1694467677467!5m2!1sen!2s" 
+  
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p>© 2024 Nursing College. All rights reserved.</p>
+        <p>Email: <a href="mailto:sukaina.cn@gmail.com">sukaina.cn@gmail.com</a></p>
+        <p>Phone No: <a href="009-5640167">009-5640167</a></p>
+            <a href="c:\Users\Rafay\Desktop\SCN\contsct us.html">Contact Us</a> |
+            <a href="terms.html">Terms & Conditions</a>
+        </p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i><img src="pic/insta.png" alt="instagram"></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i><img src="pic/fb.png" alt="facebook"></a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><img src="pic/in.png" alt="linkedin"></a>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright ©2024 SUKAINA COLLEGE OF NURSING MIDWIFERY AND ALLIED HEALTH SCIENCES KHANPUR</p>
+    </div>
+  </footer>
+</body>
+</html>

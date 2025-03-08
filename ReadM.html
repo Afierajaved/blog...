@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sukaina College of Nursing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .sticky-header {
+    height: 120px;
+   position: sticky;
+   top: 0;
+   background-color: #d5e1de;
+   z-index: 1000;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.login-btn {
+    width: 90px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #30866f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .login-btn:hover {
+    background-color: #399e6d;
+  }
+.logo {
+  padding: 10px 20px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  position: relative; 
+  z-index: 1000;
+}
+.logo img {
+  height: 100px;
+  margin-right: 20px;
+}
+.logo h1{
+  font-size: 30PX;
+  color: #034d3f;
+  margin-bottom: 0%;
+}
+.logo p {
+  margin-top: 0%;
+  color: #034d3f;
+  font-size: 18.5px;
+}
+.button-container {
+    margin-left: 1320px;
+    display: flex;
+    gap: 5px;
+}
+.login-button, .signup-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login-button {
+    background-color: #399e6d;
+    color: white;
+}
+.login-button:hover {
+    background-color: #399e6d;
+}
+.signup-button {
+    background-color: #034d3f;
+    color: white;
+}
+.signup-button:hover {
+    background-color: #034d3f;
+}
+.logo {
+  padding: 10px 20px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  position: relative; 
+  z-index: 1000;
+}
+.logo img {
+  height: 100px;
+  margin-right: 20px;
+}
+.logo h1{
+  font-size: 30PX;
+  color: #034d3f;
+  margin-bottom: 0%;
+}
+.logo p {
+  margin-top: 0%;
+  color: #034d3f;
+  font-size: 18.5px;
+}
+
+
+.navbar {
+  position: relative;
+  display: flex;
+  width: 97.5%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #30866f;
+  padding: 2px 20px;
+  z-index: 1000;
+  }
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+.dropdown-menu {
+ display: none;
+ position: absolute;
+ background-color: #444;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ top: 100%;
+ left: 0;
+ min-width: 150px;
+}
+.dropdown-menu li a {
+   padding: 10px;
+   display: block;
+}
+.dropdown:hover .dropdown-menu {
+   display: block;
+}
+.language-select {
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 35px;
+}
+
+    
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+h2 {
+    color: #004d33;
+}
+h3 {
+    color: #004d33;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #004d33;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}  
+
+    footer {
+      background: linear-gradient( #72b3b4, #399e6d);
+      color: white;
+      text-align: center;
+      padding: 0px 10px;
+    }
+    .map-container iframe {
+      width: 50%;
+      height: 200px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+.footer-container {
+
+    max-width: 800px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.footer-container a {
+    color: #cce7e2;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-size: 28px;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+    .footer-links {
+      margin-top: 20px;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+    footer h2 {
+      font-size: 20px;
+    }
+    .social-icons a {
+      font-size: 24px;
+    }
+    .footer-links a {
+      font-size: 12px;
+    }
+    }
+    .footer-bottom {
+    background-color: #285e57;
+    padding: 10px 0;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #cce7e2;
+}
+    </style>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Thank you for your message!");
+    });
+   
+   
+  </script>
+</head>
+<body>
+    <div class="sticky-header">
+      <div class="logo">
+        <img src="pic/SCN logo.png" alt="College Logo">
+        <div>
+          <h1>SUKAINA COLLEGE OF NURSING</h1>
+          <p>MIDWIFERY AND ALLIED HEALTH SCIENCES KHANPUR</p>
+        </div>
+        <button class="login-btn">Login</button>
+        <a href="c:\Users\User\Desktop\SCN\login.html" class="login-btn">Login</a>
+      </div>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="c:\Users\User\Desktop\SCN\SCN.html">Home</a></li>
+          <li class="dropdown">
+              <a href="c:\Users\User\Desktop\SCN\Ab.Us.html">About Us</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">Mission</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Leadership</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="c:\Users\User\Desktop\SCN\program.html">Programs</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">BSN</a></li>
+                  <li><a href="#">BSM</a></li>
+                  <li><a href="#">LHV</a></li>
+                  <li><a href="#">CNA</a></li>
+                  <li><a href="#">Community midwifes</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#">Academics</a>
+              <ul class="dropdown-menu">
+                  <li><a href="c:\Users\User\Desktop\SCN\program.html">Programs</a></li>
+                  <li><a href="c:\Users\User\Desktop\SCN\faculties.html">Faculties</a></li>
+                  <li><a href="c:\Users\User\Desktop\SCN\Departments.html">Departments</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Students</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\Gallary.html">Gallary</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\News.html">News</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\contsct us.html">Contact Us</a></li>
+      </ul>
+      <div class="language-select">
+        <select>
+            <option value="en">English</option>
+            <option value="ur">Urdu</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
+    </div>
+  </nav>
+  </div>
+  </div>
+  <section>
+    <div class="container">
+      <h2>Bachelor of Science in Nursing (BSN)</h2>
+
+      <p>The Bachelor of Science in Nursing (BSN) is a four-year program designed to prepare students for a career in professional nursing. 
+         It provides in-depth knowledge in healthcare, patient care, leadership, and advanced medical science.</p>
+
+      <h3>📌 Course Structure</h3>
+      <ul>
+          <li>Human Anatomy & Physiology</li>
+          <li>Pharmacology</li>
+          <li>Medical-Surgical Nursing</li>
+          <li>Mental Health & Psychology</li>
+          <li>Community & Public Health</li>
+      </ul>
+
+      <h2>🚀 Importance of BSN</h3>
+      <p>Graduates with a BSN degree have more career opportunities, higher salaries, and better patient care compatency. 
+         Many hospitals now prefer hiring BSN-qualified nurses for leadership roles.</p>
+         <h3>1️⃣ Career Opportunities</h3>
+            <p>A BSN degree opens doors to various specialized nursing roles in hospitals, clinics, research, and military healthcare.
+            Many employers prefer hiring BSN graduates over diploma nurses.</p>
+          <h3>2️⃣ Higher Salary & Job Security</h3>
+            <p>BSN nurses earn more than those with an other degrees.
+            Greater demand due to the nursing qualified staf shortage worldwide.</p>
+          <h3>3️⃣ Leadership & Advanced Roles</h3>
+            <p>BSN nurses can take leadership positions such as:</p>
+            <ul>
+              <li>Nurse Manager</li>
+              <li>Clinical Coordinator</li>
+              <li>Nurse Educator</li>
+              <li>Case Manager</li>
+              <li>Advocate</li>
+            </ul>
+          <h3>4️⃣ Better Patient Outcomes</h3>
+            Studies show BSN-prepared nurses provide safer, higher-quality care.
+            They have advanced knowledge in disease prevention, patient safety, and evidence-based practice.
+          <h3>5️⃣ Pathway to Advanced Degrees</h3>
+            <p>A BSN is a stepping stone for Master of Science in Nursing (MSN) and Doctor of Nursing Practice (DNP) programs.
+            Allows specialization in fields like:</p>
+            <ul>
+              <li>Nurse Practitioner (NP)</li>
+              <li>Nurse Anesthetist (CRNA)</li>
+              <li>Nurse Midwife (CNM)</li>
+            </ul>
+
+      <a href="c:\Users\User\Desktop\SCN\Add form.html" class="btn">Apply Now</a>
+
+      <h3>📌 Bachelor of Science in Midwifery(BSM)</h2>
+      <p>The Bachelor of Science in Midwifery (BSM) is a four-year undergraduate degree that prepares students to become professional midwives.
+         It focuses on maternal and newborn care, ensuring the safe pregnancy, labor, delivery, and postnatal care of mothers and infants.</p>
+
+      <h3>📚 Course Structure & Subjects</h3>
+      <ul>
+        <p>The program includes a mix of theoretical knowledge, clinical skills, and hands-on training in hospitals, clinics, and birthing centers.</p>
+          <li>✅ Anatomy & Physiology – Understanding the human body, especially the female reproductive system.</li>
+          <li>✅ Obstetrics & Gynecology – Care during pregnancy, childbirth, and postpartum.</li>
+          <li>✅ Neonatal & Infant Care – Care for newborn babies, including premature infants.</li>
+          <li>✅ Prenatal & Postnatal Care – Monitoring and managing maternal health before and after birth.</li>
+          <li>✅ Midwifery Procedures & Techniques – Assisting in normal and complicated births.</li>
+          <li>✅ Maternal & Child Health Nursing – Promoting health for both mother and child.</li>
+          <li>✅ Pharmacology in Midwifery – Safe medication use during pregnancy and childbirth.</li>
+          <li>✅ Family Planning & Reproductive Health – Educating and assisting with birth control options.</li>
+          <li>✅ Emergency & High-Risk Pregnancy Management – Handling complications in pregnancy and delivery.</li>
+          <li>✅ Public Health & Community Midwifery – Working with rural and underserved communities.</li>     
+      </ul>
+
+      <h2>🎯 Importance of BSM (Midwifery)</h4>
+        <ul>
+          Midwives play a critical role in maternal and infant health, ensuring safe pregnancies, deliveries, and newborn care.
+      <h3> 🔹 Why is a Bachelor of Science in Midwifery Important?</h5>
+          <li>✅ Reduces Maternal & Infant Mortality – Midwives provide skilled care that lowers birth-related deaths.</li>
+          <li>✅ Supports Natural Birth – Encourages less medical intervention and more natural childbirth.</li>
+          <li>✅ Essential for Public Health – Midwives educate communities about reproductive health.</li>
+          <li>✅ Career Growth & Global Demand – Many countries need trained midwives to improve healthcare.</li>
+          <li>✅ Empowers Women & Families – Provides emotional, physical, and medical support during childbirth.</li>
+
+      <a href="c:\Users\User\Desktop\SCN\Add form.html" class="btn">Apply Now</a>
+
+          <h2>🎯 Importance of Lady Health Visitors (LHV)</h2>
+          <p>LHVs play a vital role in primary healthcare and focus on women’s and children’s health, especially in rural and underserved areas.</p>
+
+      <h3>🔹 Why is the Role of an LHV Important?</h3>
+      <ul>
+        <li>✅ Reduces Maternal & Infant Mortality – Provides skilled care to prevent birth-related complications.</li>
+        <li>✅ Promotes Family Planning – Helps control population growth by educating families.</li>
+        <li>✅ Encourages Preventive Healthcare – Teaches hygiene, nutrition, and vaccination importance.</li>
+        <li>✅ Brings Healthcare to Remote Areas – Provides services where doctors are not available.</li>
+        <li>✅ Supports Women’s Empowerment – Educates women about reproductive rights and health.</li>
+        <li>✅ Works in Epidemic Prevention – Helps prevent the spread of diseases like malaria, dengue, and tuberculosis.</li>
+      </ul>
+      <h3>🏆 Career Opportunities for LHVs</h3>
+        <p>After completing LHV training, individuals can work in government and private healthcare sectors, NGOs, and community health programs.</p>
+      <h3>💼 Job Roles for LHVs:</h3>
+      <ul>
+        <li>🔹 Community Health Worker – Working in villages and rural areas to provide healthcare education.</li>
+        <li>🔹 Maternal & Child Health Officer – Providing prenatal and postnatal care.</li>
+        <li>🔹 Family Planning Counselor – Educating families about birth control and reproductive health.</li>
+        <li>🔹 Hospital & Clinic Nurse Assistant – Assisting doctors and nurses in hospitals.</li>
+        <li>🔹 Health Educator in NGOs – Spreading awareness about hygiene, disease prevention, and nutrition.</li>
+        <li>🔹 First Aid & Emergency Care Provider – Helping in emergency situations, especially during childbirth.</li>
+      </ul>
+    <h3>📢 Conclusion</h2>
+      <p>Lady Health Visitors (LHVs) are essential for improving healthcare in developing regions, especially for women and children. 
+        They help reduce maternal and infant mortality, promote hygiene, provide vaccinations, and educate families on family planning.
+        LHVs are highly respected healthcare workers, and their demand is increasing, especially in rural and low-income areas.</p>
+
+      <a href="c:\Users\User\Desktop\SCN\Add form.html" class="btn">Apply Now</a>
+
+      <h2>Community Midwives</h2>
+      <p>Community midwifery involves providing maternal and newborn care in the community setting. Midwives work with women before, during, and after childbirth, focusing on providing care in homes or 
+        community health centers , especially in underserved or rural areas. They also emphasize prenatal education, breastfeeding support, and postpartum care.</p>
+
+      <h3>📌  Skills and Qualities for a Community Midwife</h3>
+      <ul>
+          <li><h3>Empathy and Compassion:</h3> need to support families through the stress and excitement of childbirth with kindness.</li>
+          <li><h3>Clinical Knowledge:</h3> A solid understanding of maternal and newborn health, and the ability to recognize complications early.</li>
+          <li><h3>Communication Skills:</h3> Good midwives are excellent communicators, able to explain procedures and provide education to families.</li>
+          <li><h3>Problem-Solving Abilities:</h3> Community midwives need to make decisions quickly, especially when dealing with complications in remote settings.</li>
+      </ul>
+
+      <h2>🚀 Role of a community Midwife</h3>
+         <h3>1️⃣Prenatal Care:</h3>
+            <p>Midwives monitor the health of the mother and the developing baby during pregnancy. 
+              They provide education on nutrition, exercise, and preparing for childbirth.</p>
+          <h3>2️⃣ Assisting with Birth:</h3>
+            <p>Community midwives support women during labor and delivery, offering guidance and assistance as necessary.</p>
+          <h3>3️⃣ Emergency Care:</h3>
+            <p>Midwives are trained to recognize complications and can refer women to hospitals or specialized medical professionals when necessary.</p>
+          <h3>4️⃣ Postpartum Care:</h3>
+          <p>They check on the health of the mother and baby after birth, providing advice on breastfeeding, newborn care, and family planning.</p>
+
+      <a href="c:\Users\User\Desktop\SCN\Add form.html" class="btn">Apply Now</a>
+
+      <h2>🎯 Certified Nursing Assistant (CNA)</h2>
+      <p>A Certified Nursing Assistant (CNA) is a healthcare professional who provides basic care to patients under the supervision of a Registered Nurse (RN) or a Licensed Practical Nurse (LPN). 
+        CNAs work directly with patients to assist with daily activities and ensure comfort, safety, and basic needs are met.</p>
+
+  <h3>🔹 Skills Required for a CNA</h3>
+  <ul>
+    <li>✅ Strong Communication Skills – Ability to communicate effectively with patients, families, and healthcare teams.</li>
+    <li>✅ Physical Stamina – CNAs often work long hours on their feet and may need to assist with lifting or moving patients.</li>
+    <li>✅ Attention to Detail – Carefully monitoring patient conditions and documenting changes accurately.</li>
+    <li>✅ Compassion and Empathy – Providing emotional and physical support to patients in various settings, including nursing homes, hospitals, or home care environments.</li>
+    <li>✅ Critical Thinking – Ability to recognize changes in a patient’s condition and report them to supervisors promptly.</li>
+  </ul>
+  <h3>🏆 Career Opportunities for CNA</h3>
+  <ul>
+    <li>🔹 Job Stability </li>
+      <p>The demand for CNAs is high due to an aging population and the increasing need for healthcare services. 
+        CNAs are often the front-line caregivers, making them integral to healthcare items.</p>
+    <li>🔹 Opportunities for Advancement</li>
+        <p> CNAs can further their education and training to become LPNs, RNs, or other specialized healthcare professionals. 
+          Many pursue nursing degrees or certifications in specialized fields such as geriatrics or hospice care.</p>
+  </ul>
+<h3>📢 Conclusion</h2>
+  <p>Certified Nursing Assistants play a vital role in patient care, providing essential support in hospitals, nursing homes, and home health settings. Their compassion, 
+    attention to detail, and clinical skills are indispensable to ensuring the comfort and safety of patients. For those interested in pursuing a fulfilling healthcare 
+    career with relatively short training requirements, becoming a CNA is a rewarding and impactful choice.ly in rural and low-income areas.</p>
+
+  <a href="c:\Users\User\Desktop\SCN\Add form.html" class="btn">Apply Now</a>
+  </div>            
+  </section>
+  <footer>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.0279731773345!2d70.65231621510945!3d28.6467914824124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3938c583b7b9e84f%3A0x3ab7b184432c64c9!2sKhanpur%20College%20Of%20Nursing%20Allied%20Health%20Sciences!5e0!3m2!1sen!2s!4v1694467677467!5m2!1sen!2s" 
+  
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p>© 2024 Nursing College. All rights reserved.</p>
+        <p>Email: <a href="mailto:sukaina.cn@gmail.com">sukaina.cn@gmail.com</a></p>
+        <p>Phone No: <a href="009-5640167">009-5640167</a></p>
+            <a href="c:\Users\User\Desktop\SCN\contsct us.html">Contact Us</a> |
+            <a href="terms.html">Terms & Conditions</a>
+        </p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i><img src="pic/insta.png" alt="instagram"></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i><img src="pic/fb.png" alt="facebook"></a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><img src="pic/in.png" alt="linkedin"></a>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright ©2024 SUKAINA COLLEGE OF NURSING MIDWIFERY AND ALLIED HEALTH SCIENCES KHANPUR</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sukaina College of Nursing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .sticky-header {
+   position: sticky;
+   top: 0;
+   background-color: #d5e1de;
+   z-index: 1000;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn {
+    width: 70px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #30866f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .login-btn:hover {
+    background-color: #399e6d;
+  }
+.logo {
+  padding: 10px 20px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  position: relative; 
+  z-index: 1000;
+}
+
+.logo img {
+  height: 100px;
+  margin-right: 20px;
+}
+
+.logo h1{
+  font-size: 30PX;
+  color: #034d3f;
+  margin-bottom: 0%;
+}
+.logo p {
+  margin-top: 0%;
+  color: #034d3f;
+  font-size: 18.5px;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #034d3f;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  width: 97.5%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #30866f;
+  padding: 2px 20px;
+  z-index: 1000;
+  }
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+.dropdown-menu {
+ display: none;
+ position: absolute;
+ background-color: #444;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ top: 100%;
+ left: 0;
+ min-width: 150px;
+}
+.dropdown-menu li a {
+   padding: 10px;
+   display: block;
+}
+.dropdown:hover .dropdown-menu {
+   display: block;
+}
+.language-select {
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 35px;
+}
+   
+    .banner {
+            background-image: url('pic/banner.png');
+            background-size: cover;
+            background-position: cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(2, 106, 87);
+            text-align: justify;
+        }
+
+        .banner h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #034d3f;
+        }
+        .program {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+        .program img {
+            width: 300px;
+            height: 300px;
+            margin-right: 20px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .program h2 {
+            color: #034d3f;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #034d3f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .read-more:hover {
+            background-color: #034d3f;
+        }
+    footer {
+      background: linear-gradient( #72b3b4, #399e6d);
+      color: white;
+      text-align: center;
+      padding: 0px 10px;
+    }
+      .map-container iframe {
+      width: 50%;
+      height: 200px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+.footer-container {
+
+    max-width: 800px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.footer-container a {
+    color: #cce7e2;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-size: 28px;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+    .footer-links {
+      margin-top: 20px;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+    footer h2 {
+      font-size: 20px;
+    }
+    .social-icons a {
+      font-size: 24px;
+    }
+    .footer-links a {
+      font-size: 12px;
+    }
+    }
+    .footer-bottom {
+    background-color: #285e57;
+    padding: 10px 0;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #cce7e2;
+}
+    </style>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Thank you for your message!");
+    });
+    
+  </script>
+</head>
+<body>
+  <div class="sticky-header">
+    <div class="logo">
+      <img src="pic/SCN logo.png" alt="College Logo">
+      <div>
+        <h1>SUKAINA COLLEGE OF NURSING</h1>
+        <p>MIDWIFERY AND ALLIED HEALTH SCIENCES KHANPUR</p>
+      </div>
+      <button class="login-btn">Login</button>
+      <a href="c:\Users\User\Desktop\SCN\login.html" class="login-btn">Login</a>
+    </div>
+  <div class="line">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="c:\Users\User\Desktop\SCN\SCN.html">Home</a></li>
+          <li class="dropdown">
+              <a href="c:\Users\User\Desktop\SCN\Ab.Us.html">About Us</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">Mission</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Leadership</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="c:\Users\User\Desktop\SCN\program.html">Programs</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">BSN</a></li>
+                  <li><a href="#">BSM</a></li>
+                  <li><a href="#">LHV</a></li>
+                  <li><a href="#">CNA</a></li>
+                  <li><a href="#">Community midwifes</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#">Academics</a>
+              <ul class="dropdown-menu">
+                  <li><a href="c:\Users\User\Desktop\SCN\program.html">Programs</a></li>
+                  <li><a href="c:\Users\User\Desktop\SCN\faculties.html">Faculties</a></li>
+                  <li><a href="c:\Users\User\Desktop\SCN\Departments.html">Departments</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Students</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\Gallary.html">Gallary</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\News.html">News</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\contsct us.html">Contact Us</a></li>
+      </ul>
+      <div class="language-select">
+        <select>
+            <option value="en">English</option>
+            <option value="ur">Urdu</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
+    </div>
+  </nav>
+  </div>
+  </div>
+  <section>
+    <div class="banner">
+      <h1>NURSING PROGRAMES<br>SCNMAS</h1>
+  </div>
+
+  <div class="container">
+      <h1>Our Programs</h1>
+      
+      <div class="program">
+          <img src="pic/N1.png" alt="Nursing">
+          <div>
+              <h2>BACHELORS OF SCIENCE IN NURSING</h2>
+              <p>The process for preparing a comprehensive new year program designed to prepare students for a complete positive acquisition is open to those who have completed the three leadership activities of their needs. The program allows the scientists to set up this policy, ensuring a high-quality education in the healthcare field.</p>
+              
+              <a href="c:\Users\User\Desktop\SCN\ReadM.html" class="read-more">Read More</a>
+          </div>
+      </div>
+
+      <div class="program">
+          <div>
+              <h2>BACHELORS OF SCIENCE IN MIDWIFERY</h2>
+              <p>The facilities in midwifery program is a comprehensive four-year degree program to prepare students for a career in midwifery. Acquisitions are open to those who have completed the pre-model with a minimum of 100 cents. The program follows the question that will pay public spending on “40” quality education in maternal and newborn care.</p>
+              <a href="c:\Users\User\Desktop\SCN\ReadM.html" class="read-more">Read More</a>
+          </div>
+          <img src="pic/N2.png" alt="Midwifery">
+      </div>
+
+      <div class="program">
+          <img src="pic/N3.png" alt="Health Visitor">
+          <div>
+              <h2>LADY HEALTH VISITOR</h2>
+              <p>The early health review family program is a comprehensive new year objective designed to prepare students for a career in community healthcare. Acquisitions open to those who have completed the pre-model with a minimum of 100 cents. The program follows the question left by the career’s team programme, ensuring individual motivation and personal skills is the healthcare field.</p>
+              <a href="c:\Users\User\Desktop\SCN\ReadM.html" class="read-more">Read More</a>
+          </div>
+      </div>
+
+      <div class="program">
+          <div>
+              <h2>COMMUNITY MIDWIVES</h2>
+              <p>The community midwives program is a four-year diploma designer that has tailored the human resources available to patients. Acquisitions require the pre-model with at least 100 cents. The program provides an opportunity to successfully manage quality education. One adult provide vital care in community settings.</p>
+              <a href="c:\Users\User\Desktop\SCN\ReadM.html" class="read-more">Read More</a>
+              </a>
+          </div>
+          <img src="pic//N4.png" alt="Community Midwives">
+      </div>
+
+      <div class="program">
+          <img src="pic/N5.png" alt="Nursing Assistant">
+          <div>
+              <h2>CERTIFIED NURSING ASSISTANT</h2>
+              <p>The restructuring assistants (calls) program is a focused on our team training design and to ensure students are in a inpatient state. Activities in sports individuals can now complete immediate or no real events undertaken. The program focuses the business as key drivers of the objective. Investing in any desired outcome or practices sets in support healthcare professionals in various clinical settings.</p>
+              <a href="c:\Users\User\Desktop\SCN\ReadM.html" class="read-more">Read More</a>
+          </div>
+      </div>
+  </div>
+
+
+  </section>
+  <footer>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.0279731773345!2d70.65231621510945!3d28.6467914824124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3938c583b7b9e84f%3A0x3ab7b184432c64c9!2sKhanpur%20College%20Of%20Nursing%20Allied%20Health%20Sciences!5e0!3m2!1sen!2s!4v1694467677467!5m2!1sen!2s" 
+  
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p>© 2024 Nursing College. All rights reserved.</p>
+        <p>Email: <a href="mailto:sukaina.cn@gmail.com">sukaina.cn@gmail.com</a></p>
+        <p>Phone No: <a href="009-5640167">009-5640167</a></p>
+            <a href="c:\Users\User\Desktop\SCN\contsct us.html">Contact Us</a> |
+            <a href="terms.html">Terms & Conditions</a>
+        </p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i><img src="pic/insta.png" alt="instagram"></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i><img src="pic/fb.png" alt="facebook"></a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><img src="pic/in.png" alt="linkedin"></a>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright ©2024 SUKAINA COLLEGE OF NURSING MIDWIFERY AND ALLIED HEALTH SCIENCES KHANPUR</p>
+    </div>
+  </footer>
+</body>
+</html>

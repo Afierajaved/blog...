@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sukaina College of Nursing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .sticky-header {
+   position: sticky;
+   top: 0;
+   background-color: #d5e1de;
+   z-index: 1000;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.login-btn {
+    width: 70px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #30866f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .login-btn:hover {
+    background-color: #399e6d;
+  }
+.logo {
+  padding: 10px 20px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  position: relative; 
+  z-index: 1000;
+}
+
+.logo img {
+  height: 100px;
+  margin-right: 20px;
+}
+
+.logo h1{
+  font-size: 30PX;
+  color: #034d3f;
+  margin-bottom: 0%;
+}
+.logo p {
+  margin-top: 0%;
+  color: #034d3f;
+  font-size: 18.5px;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #034d3f;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  width: 97.5%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #30866f;
+  padding: 2px 20px;
+  z-index: 1000;
+  }
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+.dropdown-menu {
+ display: none;
+ position: absolute;
+ background-color: #444;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ top: 100%;
+ left: 0;
+ min-width: 150px;
+}
+.dropdown-menu li a {
+   padding: 10px;
+   display: block;
+}
+.dropdown:hover .dropdown-menu {
+   display: block;
+}
+.language-select {
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 35px;
+}
+.detail h2{
+  margin-top: 120px;
+  color: #035d55;
+  font-size: 30px;
+  margin-left: 600px;
+}
+.detail p{
+  margin-top: 10px;
+  color: #034d3f;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      padding: 40px;
+    }
+
+    .section {
+      flex: 1 1 calc(50% - 40px); 
+      max-width: 600px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .section img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-left: 0px;
+    }
+
+    .section p {
+      font-size: 16px;
+      color: #00695C;
+      margin: 10px;
+    }
+  
+    @media (max-width: 768px) {
+      .section {
+        flex: 1 1 100%; 
+        max-width: 100%;
+      }
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .box h3 {
+      color: #035d55;
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .box img {
+      width: 150px;
+      height: auto;
+    }
+    footer {
+      background: linear-gradient( #72b3b4, #399e6d);
+      color: white;
+      text-align: center;
+      padding: 0px 10px;
+    }
+    .map-container iframe {
+      width: 50%;
+      height: 200px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+.footer-container {
+
+    max-width: 800px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.footer-container a {
+    color: #cce7e2;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-size: 28px;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+    .footer-links {
+      margin-top: 20px;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+    footer h2 {
+      font-size: 20px;
+    }
+    .social-icons a {
+      font-size: 24px;
+    }
+    .footer-links a {
+      font-size: 12px;
+    }
+    }
+    .footer-bottom {
+    background-color: #285e57;
+    padding: 10px 0;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #cce7e2;
+}
+  </style>
+</head>
+<body>
+  <div class="sticky-header">
+    <div class="logo">
+      <img src="pic/SCN logo.png" alt="College Logo">
+      <div>
+        <h1>SUKAINA COLLEGE OF NURSING</h1>
+        <p>MIDWIFERY AND ALLIED HEALTH SCIENCES KHANPUR</p>
+      </div>
+      <button class="login-btn">Login</button>
+      <a href="c:\Users\User\Desktop\SCN\login.html" class="login-btn">Login</a>
+    </div>
+   
+  <div class="line">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="c:\Users\User\Desktop\SCN\SCN.html">Home</a></li>
+          <li class="dropdown">
+              <a href="c:\Users\User\Desktop\SCN\Ab.Us.html">About Us</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">Mission</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Leadership</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="c:\Users\User\Desktop\SCN\program.html">Programs</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">BSN</a></li>
+                  <li><a href="#">BSM</a></li>
+                  <li><a href="#">LHV</a></li>
+                  <li><a href="#">CNA</a></li>
+                  <li><a href="#">Community midwifes</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#">Academics</a>
+              <ul class="dropdown-menu">
+                  <li><a href="c:\Users\User\Desktop\SCN\program.html">Programs</a></li>
+                  <li><a href="c:\Users\User\Desktop\SCN\faculties.html">Faculties</a></li>
+                  <li><a href="c:\Users\User\Desktop\SCN\Departments.html">Departments</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Students</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\Gallary.html">Gallary</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\News.html">News</a></li>
+          <li><a href="c:\Users\User\Desktop\SCN\contsct us.html">Contact Us</a></li>
+      </ul>
+      <div class="language-select">
+        <select>
+            <option value="en">English</option>
+            <option value="ur">Urdu</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
+    </div>
+  </nav>
+  </div>
+  </div>
+  <section class="detail">
+    <h2>ABOUT SCNMAS</h2>
+    <p>Nursing is a profession within the Health Care Sector focused on the care of individuals, families, and communities so they may attain maintain or recover optimal health and quality of life. Nursing care for individuals of all ages and all cultural backgrounds who are healthy and ill in a holistic manner based on the individuals physical, emotional, psychological, intellectual, social, and spiritual needs.<br>
+        The profession combines physical sciences, social sciences and technology in caring for those individuals -in order to provide quality nursing care there is need to train nurses effectively to work as team member of health care delivery system. It is therefore their training should involve positive attitude, knowledge, skills, professional expertise, latest trends in health care needed of the community in the country as a whole.<br>
+        SCN is dedicated to excellence in nursing teaching, scholarships, practice and professional service. Nursing education is a unique practice discipline with its own national accrediting standards in legislated licensure requirements.<br></p>
+        <div class="container">
+          <div class="section">
+            <img src="pic/mission.png" alt="Mission Icon">
+            <h2>MISSION</h2>
+            <p>
+              The mission of SCN is to help youth in the acquisition of academic and moral excellence, through providing best possible facilities, training educators, enhancing technical skills, and providing high-quality education and training to prepare competent nursing professionals, with a commitment to patient care, community service, and health promotion.
+            </p>
+          </div>
+          <div class="section">
+            <img src="pic/vission.png" alt="Vision Icon">
+            <h2>VISION</h2>
+            <p>
+              To establish a knowledge-based, skillful, research and career-oriented students that may struggle for the advancement of the nursing profession and contribute towards a healthy state and society. Aspiring to be a leader in nursing education, fostering innovation, research, and excellence in healthcare.
+            </p>
+          </div>
+          <div class="section">
+            <img src="pic/goals.png"  alt="Goals Icon">
+      <h2>Goals</h2>
+      <p>
+        Our nursing college is dedicated to providing education that equips students with clinical knowledge, critical thinking, and technical skills for effective patient care. We foster empathy, professionalism, and ethical responsibility to prepare nurses to advocate for patients with dignity. Emphasizing lifelong learning, we ensure graduates stay updated with evolving healthcare practices and research. Additionally, we develop leadership and teamwork skills, empowering nurses to collaborate within multidisciplinary teams and improve patient outcomes.
+      </p>
+    </div>
+    <div class="section">
+      <img src="pic/PP.png" alt="Philosophy Icon">
+      <h2>Philosophy</h2>
+      <p>
+        Our institute is committed to developing individuals into complete professionals who positively impact the nursing profession and their communities. Through academic, artistic, and innovative pursuits, students grow into lifelong learners and ethical leaders. We empower future nurses with the knowledge, skills, and compassion needed for holistic, evidence-based care. By fostering leadership and lifelong learning, we prepare them to excel in diverse healthcare environments. Dedicated to patient-centered care, our graduates advocate for well-being and collaborate effectively in global healthcare settings.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <h3>AFFILIATED WITH</h3>
+      <img src="pic/AW.png" alt="KMU Institute of Nursing Sciences">
+    </div>
+    <div class="box">
+      <h3>REGISTERED WITH</h3>
+      <img src="pic/PNC.png" alt="Pakistan Nursing Council">
+    </div>
+    <div class="box" style="grid-column: span 2;">
+      <h3>CLINICAL AFFILIATION WITH</h3>
+      <img src="pic/CAW.png"Christian Hospital">
+    </div>
+  </div>
+      </section>
+  <footer>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.0279731773345!2d70.65231621510945!3d28.6467914824124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3938c583b7b9e84f%3A0x3ab7b184432c64c9!2sKhanpur%20College%20Of%20Nursing%20Allied%20Health%20Sciences!5e0!3m2!1sen!2s!4v1694467677467!5m2!1sen!2s" 
+  
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p>© 2024 Nursing College. All rights reserved.</p>
+        <p>Email: <a href="mailto:sukaina.cn@gmail.com">sukaina.cn@gmail.com</a></p>
+        <p>Phone No: <a href="009-5640167">009-5640167</a></p>
+            <a href="c:\Users\User\Desktop\SCN\contsct us.html">Contact Us</a> |
+            <a href="terms.html">Terms & Conditions</a>
+        </p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i><img src="pic/insta.png" alt="instagram"></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i><img src="pic/fb.png" alt="facebook"></a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><img src="pic/in.png" alt="linkedin"></a>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright ©2024 SUKAINA COLLEGE OF NURSING MIDWIFERY AND ALLIED HEALTH SCIENCES KHANPUR</p>
+    </div>
+  </footer>
+</body>
+</html>
